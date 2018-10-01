@@ -1,0 +1,23 @@
+{
+  "name": "holdemup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LevytsRoman/holdemup.git"
+  },
+  "author": "Roman Levytskyy <r.levyts@gmail.com> (levytsroman.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LevytsRoman/holdemup/issues"
+  },
+  "homepage": "https://github.com/LevytsRoman/holdemup#readme",
+  "devDependencies": {
+    "typescript": "^3.1.1"
+  }
+}
