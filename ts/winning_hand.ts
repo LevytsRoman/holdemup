@@ -20,6 +20,14 @@ export default class WinningHand extends Hand{
         // TODO
     }
 
+    // I could not come a meaningful Rank for a winning hand
+    // so I wrote a method that takes a winning hand, 
+    // compares if to this winning hand and returns the victorious one.
+    // It only works for four of a kind, but with similar logic could work for all possible ties. 
+    // I also think that it'd be helpful to modify 
+    // handEvaluator so that it doesn't just return what kind of winning hand it is, 
+    // but relevant ranks for easier comparison later
+    
     tieBreaker(winningHand: WinningHand){
         if(winningHand.rank === HandRank.FOUR_OF_A_KIND) {
             const challengerRank = this.getRankFromFour(winningHand)
