@@ -9,6 +9,8 @@ const hand_1 = __importDefault(require("./hand"));
 const winning_hand_1 = __importDefault(require("./winning_hand"));
 class HandEvaluator {
     evaluateHand(hand) {
+        if (hand.cards.length < 7)
+            throw new Error('When evaluating a hand, the hand must have 7 cards');
         let winningCards;
         if (winningCards = this.evaluateRoyalFlush(hand))
             return new winning_hand_1.default(winningCards, constants_1.HandRank.ROYAL_FLUSH);

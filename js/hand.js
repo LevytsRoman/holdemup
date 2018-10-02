@@ -27,12 +27,6 @@ class Hand {
         this.ranks[card.rank].push(card);
         return this;
     }
-    evaluateHand() {
-        // in hold'em poker there is 5 cards on board + 2 cards in hand.
-        // for convenience, the Hand class contains the board cards as well
-        if (this.cards.length < 7)
-            throw new Error('When evaluating a hand, the hand must have 7 cards');
-    }
     hasRank(rank) {
         return this.ranks[rank].length > 0;
     }

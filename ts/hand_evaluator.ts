@@ -6,12 +6,15 @@ import WinningHand from './winning_hand';
 export default class HandEvaluator {
 
   evaluateHand(hand: Hand): WinningHand {
+      if (hand.cards.length < 7)
+        throw new Error('When evaluating a hand, the hand must have 7 cards');
+      
       let winningCards: Card[] | undefined;
       if (winningCards = this.evaluateRoyalFlush(hand))
           return new WinningHand(winningCards, HandRank.ROYAL_FLUSH);
       if (winningCards = this.evaluateStraightFlush(hand))
           return new WinningHand(winningCards, HandRank.STRAIGHT_FLUSH);
-      else if (winningCards = this.evaluateFourOfAKind(hand))
+      else if (winningCards = this.evaluateFourOfAKind(hand)) 
           return new WinningHand(winningCards, HandRank.FOUR_OF_A_KIND);
       else if (winningCards = this.evaluateFullHouse(hand))
           return new WinningHand(winningCards, HandRank.FULL_HOUSE);
