@@ -29,6 +29,6 @@ const handEvaluator = new HandEvaluator()
 
 const winninghand1 = handEvaluator.evaluateHand(hand1)
 const winninghand2 = handEvaluator.evaluateHand(hand2)
-winninghand1.tieBreaker(winninghand2);
+console.log(winninghand1.tieBreaker(winninghand2));
 
 
